@@ -1,0 +1,101 @@
+.btn {
+  border: none;
+  white-space: nowrap;
+  border-radius: $btn-border-radius;
+  display: inline-block;
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 28px;
+  text-decoration: none;
+  color: $btn-color;
+  background:transparent;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out,
+              color 0.3s ease-in-out,
+              border-color 0.3s ease-in-out,
+              box-shadow 0.3s ease-in-out;
+  &-primary {
+    background: $btn-bg;
+  }
+  &-plain {
+    color: rgba(255, 255, 255, 0.78);
+    background: transparent;
+  }
+  
+  &-action {
+    padding: 0;
+    width: 42px;
+    height: 42px;
+    position: relative;
+    border-radius: 8px;
+    &__icon {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      display: block;
+      fill: rgba(255, 255, 255, 0.38);
+    }
+    &:hover {
+      background: #283036;
+      box-shadow: 0px 5px 10px -3px rgba(18, 18, 18, 0.15);
+      .btn-action__icon {
+        fill: #FD3B41;
+        transition: fill 0.3s ease-in-out;
+      }
+    }
+  }
+  &-border {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FF6E30;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 17px 38px;
+    &:hover {
+      color: $btn-color;
+      border-color: #FF6E30;
+      background: #FF6E30;
+    }
+  }
+  &-social {
+    display: block;
+    background: transparent;
+    width: 58px;
+    height: 58px;
+    position: relative;
+    text-indent: -9999px;
+    &:before {
+      content: '';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      display: block;
+      background: url('../images/social.svg') no-repeat 0 0;
+    }
+    &_fb {
+      &:before {
+        width: 13px;
+        height: 25px;
+        background-position: 0 -52px;
+      }
+    }
+    &_instagram {
+      &:before {
+        width: 27px;
+        height: 27px;
+        background-position: 0 0;
+      }
+    }
+    &_twitter {
+      &:before {
+        width: 29px;
+        height: 24px;
+        background-position: 0 -27px;
+      }
+    }
+  }
+}

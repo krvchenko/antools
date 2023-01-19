@@ -1,0 +1,22 @@
+.form-input {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px 24px 21px 24px;
+  background: #283036;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(255, 255, 255, 0.38);
+  box-sizing: border-box;
+  caret-color: #837A93;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &_search {
+    padding-left: 55px;
+    background: #283036 url('../images/ico-search.svg') no-repeat 18px center;
+  }
+}

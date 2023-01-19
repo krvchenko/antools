@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  front:
+    container_name: antools-front
+    image: node:14.21
+    restart: always
+    tty: true
+    working_dir: /app
+    environment:
+      - HOST=0.0.0.0
+    volumes:
+      - ./front:/app
+    ports:
+      - 8080:8080
+    command:  bash -c "npm install && npm start"

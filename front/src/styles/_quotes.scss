@@ -1,0 +1,109 @@
+.quotes {
+  margin-bottom: 60px;
+  @media (min-width: 992px) {
+    margin-bottom: 250px;
+  }
+  &__item {
+    @media (min-width: 992px) {
+      display: flex;
+      padding: 0 80px;
+    }
+    @media (min-width: 1280px) {
+      display: flex;
+      padding: 0 188px;
+    }
+  }
+  &__author {
+    position: relative;
+    background: url('../images/slider-bg.png') no-repeat center bottom;
+    @media (min-width: 992px) {
+      background-position: left bottom;
+    }
+  }
+  &__img {
+    margin: 0 auto;
+    display: block;
+  }
+  &__text {
+    position: relative;
+    padding: 48px 0 0 0;
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 0.015em;
+    color: rgba(255, 255, 255, 0.78);
+    &:before {
+      content: '';
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 101px;
+      height: 97px;
+      display: block;
+      background: url('../images/quote-bg.svg') no-repeat center;
+    }
+    @media (min-width: 768px) {
+      padding: 48px 0 0 57px;
+    }
+    @media (min-width: 992px) {
+      padding: 48px 0 0 57px;
+      margin-top: 80px;
+    }
+  }
+  &__info {
+    overflow: hidden;
+    left: calc(50% + 45px);
+    transform: translate(-50%, 0);
+    bottom: 29px;
+    position: absolute;
+    white-space: nowrap;
+    padding: 9px 22px 15px 22px;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 39px;
+    letter-spacing: 0.015em;
+    color: rgba(255, 253, 253, 0.78);
+    background: rgba(40, 48, 54, 0.8);
+    border-radius: 8px;
+    border: 1px solid #333C44;
+    &:after {
+      content: '';
+      right: -70px;
+      bottom: -70px;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      display: block;
+      border-radius: 50%;
+      background: #007ACC;
+      -webkit-filter: blur(2.5px);
+      filter: blur(25px);
+      opacity: .5;
+    }
+    &:before {
+      content: '';
+      right: -10px;
+      bottom: 70px;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      display: block;
+      border-radius: 50%;
+      background: rgba(255, 110, 48, 0.7);
+      filter: blur(40px);
+      opacity: .2;
+    }
+    span {
+      margin-top: 2px;
+      display: block;
+      font-size: 16px;
+      line-height: 24px;
+      color: rgba(255, 253, 253, 0.55);
+    }
+
+    @media (min-width: 992px) {
+      transform: translate(0, 0);
+      left: auto;
+      right: 4px;
+    }
+  }
+}
